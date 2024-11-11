@@ -1,0 +1,406 @@
+/* Keyframes untuk animasi pan dari kiri */
+@keyframes pan-left {
+  0% {
+    transform: translateX(-100%);
+    /* Mulai dari luar layar sebelah kiri */
+    opacity: 0;
+    /* Mulai dari transparan */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Berhenti di posisi aslinya */
+    opacity: 1;
+    /* Menjadi sepenuhnya terlihat */
+  }
+}
+
+/* Keyframes untuk animasi pan dari kanan */
+@keyframes pan-right {
+  0% {
+    transform: translateX(100%);
+    /* Mulai dari luar layar sebelah kanan */
+    opacity: 0;
+    /* Mulai dari transparan */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Berhenti di posisi aslinya */
+    opacity: 1;
+    /* Menjadi sepenuhnya terlihat */
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+    /* Mulai dari ukuran sangat kecil */
+    opacity: 0;
+    /* Mulai dari transparan */
+  }
+
+  80% {
+    transform: scale(1);
+    /* Sedikit lebih besar dari ukuran normal */
+    opacity: 1;
+    /* Sementara berubah menjadi terlihat */
+  }
+
+  100% {
+    transform: scale(1);
+    /* Kembali ke ukuran normal */
+  }
+}
+
+/* @keyframes  {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  } */
+
+/* Animasi fade-in untuk tombol */
+@keyframes fadeInBtn {
+  0% {
+    opacity: 0;
+    /* Tombol tidak terlihat di awal */
+    transform: scale(0.5);
+    /* Mulai dari ukuran kecil */
+  }
+
+  100% {
+    opacity: 1;
+    /* Sepenuhnya terlihat */
+    transform: scale(1);
+    /* Ukuran normal */
+  }
+}
+
+/* Animasi fade-in dari hilang */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* Mulai dari transparan */
+    transform: scale(0.5);
+    /* Mulai dari ukuran kecil */
+  }
+
+  100% {
+    opacity: 1;
+    /* Sepenuhnya terlihat */
+    transform: scale(1);
+    /* Ukuran normal */
+  }
+}
+
+/* Animasi pulse */
+@keyframes pulseAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+    /* Ukuran normal */
+  }
+
+  50% {
+    transform: scale(1.05);
+    /* Membesar sedikit di pertengahan */
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* quran */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+    /* Mempertahankan translate */
+  }
+
+  50% {
+    transform: translate(-50%, 0) scale(1.1);
+    /* Tetap di tengah sambil memperbesar */
+  }
+
+  100% {
+    transform: translate(-50%, 0) scale(1);
+    /* Kembali ke ukuran normal tanpa bergeser */
+  }
+}
+
+/* @keyframes typingVertical {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 1000px;
+    opacity: 1;
+  }
+} */
+
+/* @keyframes typing {
+  0% {
+    opacity: 0;
+    content: "";
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typingEffect {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+} */
+
+/* Keyframes */
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+
+  15% {
+    transform: rotateZ(-15deg);
+  }
+
+  20% {
+    transform: rotateZ(10deg);
+  }
+
+  25% {
+    transform: rotateZ(-10deg);
+  }
+
+  30% {
+    transform: rotateZ(6deg);
+  }
+
+  35% {
+    transform: rotateZ(-4deg);
+  }
+
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* Animasi Ride the Text Wave */
+@keyframes textWave {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-5px);
+  }
+
+  20% {
+    transform: translateY(5px);
+  }
+
+  30% {
+    transform: translateY(-5px);
+  }
+
+  40% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+
+  70% {
+    transform: translateY(-5px);
+  }
+
+  80% {
+    transform: translateY(5px);
+  }
+
+  90% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+
+  100% {
+    background-position: 500%;
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(250px) rotate(200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Roll Left Animation */
+@keyframes rollleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) rotate(-200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Roll Right Animation */
+@keyframes rollright {
+  0% {
+    opacity: 0;
+    transform: translateX(250px) rotate(200deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Rotate Center Animation */
+@keyframes rotatecenter {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Typing animation style Home Section*/
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--pink);
+  }
+}
+
+@keyframes scale-up-down {
+  0%,
+  100% {
+    transform: scale(0.1);
+    /* Ukuran normal */
+  }
+
+  50% {
+    transform: scale(0.5);
+    /* Membesar */
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}

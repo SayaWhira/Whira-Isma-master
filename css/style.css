@@ -1,0 +1,1412 @@
+:root {
+  --pink: #f14e95;
+  --bg: rgb(23, 24, 23);
+  --shadow: 0 4px 4px rgb(0 0 0 / 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
+  /* min-height: 4000px; */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../img/Prewed.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  /* filter: grayscale(); */
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  transition: transform 3s ease-in-out;
+  /* Smooth transition for lifting */
+  transform: translateY(0);
+  /* Start position */
+}
+
+.hero.lift {
+  transform: translateY(-100vh);
+  /* Move hero upwards off-screen */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  /* Make sure it covers full screen while it's visible */
+  z-index: 10;
+  /* Keep hero section under off-canvas */
+}
+
+.hero-hidden {
+  display: none;
+}
+
+.hero h4 {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  color: #ffe08e;
+  position: relative;
+  /* left: 43rem;
+  top: 20rem; */
+  opacity: 0.5;
+}
+
+.hero p {
+  font-weight: bold;
+  /* Menambah ketebalan huruf */
+  font-size: 5rem;
+  /* Membuat teks lebih besar */
+  /* letter-spacing: 1px; Menambah spasi antar huruf */
+  color: #ffe08e;
+  /* Memastikan teks berwarna putih (atau sesuai kebutuhan) */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  /* Menambahkan bayangan pada teks agar terlihat lebih jelas */
+  position: relative;
+  left: 43rem;
+  top: 20rem;
+}
+
+.hero .btn {
+  position: relative;
+  top: 19rem;
+  left: 43rem;
+}
+
+.logo-header {
+  height: 200px;
+  /* Sesuaikan tinggi logo */
+  width: auto;
+  /* Agar proporsi logo tetap terjaga */
+  max-width: 100%;
+  /* Pastikan gambar tidak lebih besar dari container */
+  display: block;
+  /* Membuat gambar bertindak sebagai elemen block */
+  margin: 0 auto;
+  /* Untuk memastikan logo berada di tengah, jika diperlukan */
+  position: relative;
+  left: 43rem;
+  top: 20rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+.hero a {
+  color: white;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  background-color: var(--pink);
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: #ffe08e;
+  color: white;
+}
+
+.handwriting {
+  font-family: "Courier New", Courier, monospace;
+  /* Pastikan font ini tersedia */
+  font-size: 1rem !important;
+  font-style: italic;
+  color: #ffe08e !important;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Navbar Start */
+
+.offcanvas-body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  animation: textWave 3s infinite ease-in-out;
+  animation-delay: 0.5s;
+  /* Delay agar ada jeda sebelum animasi dimulai */
+}
+
+/* .mynavbar {
+  font-family: "sacramento", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+} */
+
+.offcanvas-title {
+  font-family: "sacramento", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+  mix-blend-mode: difference;
+}
+
+.mynavbar {
+  background-color: rgba(209, 199, 206, 0.178) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+  /* Limit the height to 50% of the viewport */
+  width: 50vw;
+  /* Set the width to 80% of the viewport */
+  max-width: 320px;
+  /* Set a max width if needed */
+}
+
+.quran {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Sesuaikan tinggi dengan viewport */
+  overflow: hidden;
+  /* Sembunyikan bagian video yang keluar dari area */
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Tempatkan video di belakang elemen lain */
+  overflow: hidden;
+}
+
+.video-quran {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: auto;
+  min-height: auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Agar tetap berada di belakang konten */
+  object-fit: cover;
+  /* Video akan memenuhi seluruh area tanpa distorsi */
+  pointer-events: none;
+  /* Agar video tidak bisa diinteraksi */
+}
+
+.quran-image {
+  max-width: 300%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  /* opacity: 0; */
+  padding-bottom: 6rem;
+  /* animation: fadeIn 5s ease-in forwards; */
+}
+
+.logo {
+  position: absolute;
+  top: 15%;
+  /* Adjust sesuai posisi yang diinginkan */
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  max-width: 30%;
+  /* Ukuran logo lebih kecil */
+  height: auto;
+  /* opacity: 0; */
+  /* animation: fadeIn 5s ease-in forwards, pulse 3s infinite ease-in-out 3s; */
+}
+
+.ayat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 500px;
+  /* Sesuaikan dengan tinggi elemen */
+  overflow: hidden;
+  /* Sembunyikan bagian teks yang belum muncul */
+  white-space: pre-wrap;
+  /* Mengizinkan teks untuk membungkus */
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Merienda", cursive;
+  font-style: italic;
+  font-weight: bold;
+  color: #000000;
+  /* Sesuaikan warna teks */
+  opacity: 0;
+  /* Dimulai dengan tidak terlihat */
+  transition: opacity 0.5s ease-in;
+  /* Transisi opacity */
+}
+
+.reference {
+  position: absolute;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-family: "Merienda", cursive;
+  font-weight: bold;
+  left: 10rem;
+  top: 40rem;
+  bottom: 10rem;
+  color: #000000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.ayat.animate {
+  opacity: 1;
+}
+
+.reference.animate {
+  opacity: 1;
+}
+
+/* home start */
+.home {
+  background-image: url(../img/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+  margin-top: -2rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  /* margin: 0; */
+}
+
+.story h2,
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
+  color: var(--pink);
+  font-family: "sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.home h2 {
+  color: var(--pink);
+  font-family: "sacramento";
+  font-size: 7rem;
+  font-weight: bold;
+  bottom: 1rem;
+  position: relative;
+  animation: expand 20s ease-out forwards,
+    pulseAnimation 6s ease-in-out infinite;
+}
+
+.home h3 {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.home .couple {
+  margin-top: 100px;
+}
+
+.home .couple .isma {
+  font-family: "sacramento";
+  font-size: 2.4rem !important;
+  color: var(--pink);
+  position: relative;
+  animation: pan-left 7s ease-out forwards,
+    pulseAnimation 6s ease-in-out infinite;
+}
+
+.home .couple .whira {
+  font-family: "sacramento";
+  font-size: 2.4rem !important;
+  color: var(--pink);
+  position: relative;
+  animation: pan-right 7s ease-out forwards;
+}
+
+.home .couple img {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid var(--pink);
+  display: inline-block;
+  /* Pastikan gambar dan border tidak terpengaruh oleh elemen lain */
+}
+
+.home .heart {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(65px);
+  z-index: 2;
+}
+
+.home .heart i {
+  margin: auto;
+  color: var(--pink);
+}
+
+/* Pastikan animasi berjalan hanya ketika ada class 'animate' */
+.home h2,
+.home .couple .isma,
+.home .couple .whira {
+  opacity: 0;
+  /* Elemen tersembunyi di awal */
+  transition: opacity 0.5s ease-out;
+  /* Smooth transition */
+}
+
+.home .judul {
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+
+.home h3 {
+  font-size: 1.2rem !important;
+}
+
+.home .ortu2 {
+  color: var(--pink);
+  font-size: 1.2rem !important;
+}
+
+.home .ortu1 {
+  color: var(--pink);
+  font-size: 1.2rem !important;
+}
+
+.home p,
+.home h3 {
+  opacity: 0;
+  /* Elemen tersembunyi di awal */
+  transition: opacity 0.5s ease-out;
+  /* Smooth transition */
+}
+
+.home.animate h2,
+.home.animate .couple .isma,
+.home.animate .couple .whira {
+  opacity: 1;
+  /* Tampilkan elemen */
+  animation: expand 5s ease-out forwards, pulseAnimation 2s ease-in-out infinite;
+}
+
+.home.animate p,
+.home h3 {
+  opacity: 1;
+  /* Tampilkan elemen */
+  animation: expand 5s ease-out forwards;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Roll Left -> Scale Up and Down for Isma's Image */
+.home.animate .couple .animate-img1 {
+  animation: rollleft 2s ease forwards, bounce 7s ease 2s infinite;
+}
+
+/* Roll Right -> Scale Up and Down for Whira's Image */
+.home.animate .couple .animate-img2 {
+  animation: rollright 2s ease forwards, bounce 7s ease 2s infinite;
+}
+
+/* Pan Left (Isma) and Pan Right (Whira) */
+.home.animate .couple .isma {
+  opacity: 1;
+  /* animation: pan-left 3s ease-out forwards; */
+}
+
+.home.animate .couple .whira {
+  opacity: 1;
+  /* animation: pan-right 3s ease-out forwards; */
+}
+
+/* home end */
+
+.gallery {
+  overflow-x: hidden;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* info section start */
+.info {
+  color: white;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  background-image: url("../img/slide/RJN06408.JPG");
+  /* Gambar default */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 3s ease-in-out;
+}
+
+.info .alamat {
+  font-size: 1.1rem;
+}
+
+.info .description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.info.card {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid #999;
+}
+
+.info.card-header {
+  border-bottom: 1px solid #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.info.card-body {
+  font-size: 1rem;
+}
+
+.info.card-footer {
+  border-top: 1px solid #999;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.info h2 {
+  position: relative;
+  /* color: #41b841; */
+  font-family: "sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #f14e95;
+  /* color: white; */
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  top: -7rem;
+}
+
+.info .alamat {
+  /* font-weight: bold; */
+  position: relative;
+  top: -7rem;
+  -webkit-text-stroke: 1px #f14e95;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.info .description {
+  position: relative;
+  -webkit-text-stroke: 1px #ffffff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+  top: 7rem;
+  font-size: 0.8rem;
+  mix-blend-mode: difference;
+}
+
+.custom-btn {
+  top: 26rem;
+  position: relative;
+  padding: 2px 6px;
+  /* Mengurangi padding untuk mengecilkan tombol */
+  font-size: 8px;
+  /* Mengecilkan ukuran teks di tombol */
+  line-height: 1.2;
+  /* Mengurangi tinggi garis agar lebih kompak */
+  border-radius: 2px;
+  /* Mengecilkan sudut */
+}
+
+.custom-card {
+  width: 100%;
+  /* Memperkecil ukuran card */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Transparan dengan opacity 0.8 */
+  border-radius: 15px;
+  /* Membuat sudut lebih melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Tambahkan bayangan untuk efek */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Animasi saat hover */
+  top: 5rem;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+  /* Efek zoom saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Memperbesar bayangan saat hover */
+}
+
+.custom-card {
+  font-size: 14px;
+  /* Ukuran font default untuk semua teks di dalam card */
+}
+
+.custom-card .card-header {
+  font-size: 16px;
+  /* Judul card lebih besar sedikit */
+}
+
+.custom-card .card-footer {
+  font-size: 12px;
+  /* Teks footer lebih kecil */
+}
+
+.custom-card .bi {
+  font-size: 18px;
+  /* Ukuran ikon */
+}
+
+.custom-card span {
+  font-size: 12px;
+  /* Ukuran teks individual dalam span */
+}
+
+/* story */
+.story,
+.gallery,
+.rsvp,
+.gifts {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.story span,
+.gallery span,
+.gifts span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.story p,
+.gallery p,
+.gifts p {
+  font-size: 1rem;
+  /* font-weight: 300; */
+}
+
+.story {
+  background-image: url("../img/bgg.PNG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* Menghindari gambar terulang */
+  background-position: center;
+  /* Memastikan gambar ada di tengah */
+  /* width: 100%; */
+  /* right: 40rem; */
+  /* height: 100vh; */
+}
+
+.story h3 {
+  color: var(--pink);
+  font-family: "sacramento";
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 2px;
+  background-color: var(--pink);
+  left: 50%;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li::after {
+  clear: both;
+}
+
+.timeline li .timeline-image {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* posisi timeline kiri */
+.timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #ff009d;
+  /* padding: 1rem; */
+  position: relative;
+  border-radius: 8px;
+}
+
+.timeline li .timeline-panel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 14px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #ff009d;
+  border-right: 0 solid #ff009d;
+  border-bottom: 14px solid transparent;
+  top: 81px;
+  right: -13px;
+}
+
+/* posisi timeline kanan */
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -13px;
+  right: auto;
+}
+
+.gallery {
+  background-color: #f5f5f5;
+}
+
+.rsvp {
+  background-color: var(--bg);
+}
+
+.rsvp h2 {
+  font-size: 4.5rem;
+}
+
+.rsvp p {
+  color: white;
+}
+
+.rsvp form label {
+  color: white;
+}
+
+.rsvp button {
+  background-color: var(--pink);
+  color: white;
+  border: 1px solid var(--pink);
+}
+
+.rsvp button:hover {
+  background-color: var(white);
+  color: var(--pink);
+  border: 1px solid var(white);
+}
+
+footer {
+  padding: 1rem;
+  background-color: var(--pink);
+  color: white;
+}
+
+footer a {
+  color: var(--bg);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .home .heart {
+    transform: translateX(-50%) translateY(110px);
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .quran-image {
+    padding-top: 15%;
+    width: 100%;
+    height: 100%;
+    /* Lebih kecil untuk layar yang lebih kecil */
+  }
+
+  .logo {
+    max-width: 35%;
+    /* Menyesuaikan ukuran logo */
+    top: 19%;
+    /* Menurunkan posisi logo */
+  }
+
+  .quran p {
+    font-size: 15px;
+    /* Lebih kecil lagi untuk layar sempit */
+    top: 53%;
+    /* Menyesuaikan posisi teks */
+    width: 60%;
+    /* Mengoptimalkan ruang teks */
+  }
+
+  .video-quran {
+    top: 46.6%;
+    height: 100vh;
+  }
+
+  .reference {
+    top: 72%;
+    left: 36%;
+    font-size: 16px;
+  }
+}
+
+/* Large devices (laptops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  html {
+    font-size: 75%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 40px;
+  }
+
+  .home .heart {
+    display: none;
+  }
+
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .timeline li .timeline-panel {
+    width: calc(100% - 200px);
+    float: right;
+  }
+
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .quran-image {
+    padding-top: 21%;
+    max-width: 100%;
+    /* Lebih kecil untuk layar yang lebih kecil */
+  }
+
+  .logo {
+    max-width: 35%;
+    /* Menyesuaikan ukuran logo */
+    top: 23%;
+    /* Menurunkan posisi logo */
+  }
+
+  .quran p {
+    font-size: 14px;
+    /* Lebih kecil lagi untuk layar sempit */
+    top: 57%;
+    /* Menyesuaikan posisi teks */
+    width: 55%;
+    /* Mengoptimalkan ruang teks */
+  }
+
+  .reference {
+    top: 75%;
+    right: 26%;
+    font-size: 17px;
+  }
+
+  .video-quran {
+    top: 47.4%;
+    height: 100vh;
+  }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  html {
+    font-size: 65%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 5px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .timeline li .timeline-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .quran-image {
+    padding-top: 50%;
+    max-width: 100%;
+    /* Lebih kecil untuk layar yang lebih kecil */
+  }
+
+  .logo {
+    max-width: 35%;
+    /* Menyesuaikan ukuran logo */
+    top: 35%;
+    /* Menurunkan posisi logo */
+  }
+
+  .quran p {
+    font-size: 14px;
+    /* Lebih kecil lagi untuk layar sempit */
+    top: 65%;
+    /* Menyesuaikan posisi teks */
+    width: 55%;
+    /* Mengoptimalkan ruang teks */
+  }
+
+  .video-quran {
+    top: 47.4%;
+    height: 100vh;
+  }
+
+  .reference {
+    top: 80%;
+    right: 20%;
+    font-size: 17px;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 3px;
+  }
+
+  .timeline li .timeline-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 65%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+
+  .timeline li .timeline-panel::after {
+    top: 31%;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .quran-image {
+    padding-top: 28%;
+    max-width: 90%;
+    /* Lebih kecil untuk layar yang lebih kecil */
+  }
+
+  .logo {
+    max-width: 35%;
+    /* Menyesuaikan ukuran logo */
+    top: 27%;
+    /* Menurunkan posisi logo */
+  }
+
+  .quran p {
+    font-size: 13px;
+    /* Lebih kecil lagi untuk layar sempit */
+    top: 60%;
+    /* Menyesuaikan posisi teks */
+    width: 57%;
+    /* Mengoptimalkan ruang teks */
+  }
+
+  .video-quran {
+    top: 50%;
+    height: 100vh;
+  }
+
+  .reference {
+    top: 76%;
+    right: 21%;
+    font-size: 17px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .mynavbar {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: none;
+  }
+
+  .mynavbar .offcanvas {
+    height: 100vh;
+    /* Limit the height to 50% of the viewport */
+    width: 50vw;
+    /* Set the width to 80% of the viewport */
+    max-width: 320px;
+    /* Set a max width if needed */
+  }
+
+  .mynavbar .offcanvas-title {
+    font-family: "sacramento", cursive;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  html {
+    font-size: 60%;
+  }
+
+  .hero h4 {
+    top: 25rem;
+    left: 4rem;
+  }
+
+  .logo-header {
+    height: 100px;
+    left: 4rem;
+    top: 25rem;
+    /* Mengurangi ukuran logo */
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    left: 4rem;
+    top: 25rem;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 30px;
+    margin: 3px;
+    left: 4rem;
+    top: 25rem;
+  }
+
+  .hero .btn {
+    left: 4rem;
+    top: 25rem;
+  }
+
+  .quran-image {
+    padding-top: 23%;
+    max-width: 90%;
+    /* Lebih kecil untuk layar yang lebih kecil */
+  }
+
+  .logo {
+    max-width: 35%;
+    /* Menyesuaikan ukuran logo */
+    top: 25%;
+    /* Menurunkan posisi logo */
+  }
+
+  .quran p {
+    font-size: 10px;
+    /* Lebih kecil lagi untuk layar sempit */
+    top: 59%;
+    /* Menyesuaikan posisi teks */
+    width: 55%;
+    /* Mengoptimalkan ruang teks */
+  }
+
+  .mynavbar {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: none;
+  }
+
+  .mynavbar .offcanvas {
+    height: 100vh;
+    /* Limit the height to 50% of the viewport */
+    width: 50vw;
+    /* Set the width to 80% of the viewport */
+    max-width: 320px;
+    /* Set a max width if needed */
+  }
+
+  .mynavbar .offcanvas-title {
+    font-family: "sacramento", cursive;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  .home {
+    margin-top: 0rem;
+    background-image: url(../img/bggg.png);
+  }
+
+  .home h2 {
+    top: 2rem;
+    font-size: 5rem;
+  }
+
+  .home h3 {
+    position: relative;
+    top: 3rem;
+  }
+
+  .home .judul {
+    position: relative;
+    top: 3rem;
+  }
+
+  .home .couple .isma {
+    top: -6rem;
+    animation: expand 20s ease-out forwards,
+      pulseAnimation 6s ease-in-out infinite;
+  }
+
+  .home .couple .whira {
+    top: -6rem;
+    animation: expand 20s ease-out forwards,
+      pulseAnimation 6s ease-in-out infinite;
+  }
+
+  .home .heart {
+    display: none;
+  }
+
+  .home p {
+    position: relative;
+    top: -7rem;
+    font-size: 10px;
+  }
+
+  .home .couple img {
+    position: relative;
+  }
+
+  .custom-btn {
+    top: -8rem;
+    position: relative;
+    padding: 2px 6px;
+    /* Mengurangi padding untuk mengecilkan tombol */
+    font-size: 8px;
+    /* Mengecilkan ukuran teks di tombol */
+    line-height: 1.2;
+    /* Mengurangi tinggi garis agar lebih kompak */
+    border-radius: 2px;
+    /* Mengecilkan sudut */
+  }
+
+  .info .description {
+    top: 11rem;
+  }
+
+  .custom-card {
+    width: 80%;
+    left: 3rem;
+    /* Memperkecil ukuran card */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Transparan dengan opacity 0.8 */
+    border-radius: 15px;
+    /* Membuat sudut lebih melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Tambahkan bayangan untuk efek */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Animasi saat hover */
+    top: 9rem;
+  }
+
+  .custom-card1 {
+    width: 80%;
+    /* height: 100%; */
+    left: 3rem;
+    /* Memperkecil ukuran card */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Transparan dengan opacity 0.8 */
+    border-radius: 15px;
+    /* Membuat sudut lebih melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Tambahkan bayangan untuk efek */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Animasi saat hover */
+    top: 7rem;
+  }
+
+  .story {
+    background-image: url("../img/bgggg.png");
+    background-size: cover;
+  }
+
+  .story p {
+    font-size: 1.3rem;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    padding-left: 5px;
+  }
+
+  .story span {
+    padding-left: 5px;
+    font-size: 1rem;
+    color: #ff009d;
+  }
+
+  .story h3 {
+    padding-left: 5px;
+  }
+
+  .timeline li .timeline-image {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .gallery .row.row-cols-lg-4 {
+    display: flex;
+    flex-wrap: wrap;
+    /* menghilangkan pengaturan wrap agar tetap satu baris */
+    overflow-x: auto;
+    /* memungkinkan scroll horizontal */
+  }
+
+  .gallery .row.row-cols-lg-4 .col {
+    flex: 0 0 25%;
+    /* mengatur lebar kolom agar tidak mengecil */
+    width: 25%;
+    /* memastikan 4 gambar dalam satu baris */
+  }
+
+  .rsvp button {
+    left: 16rem;
+    position: relative;
+  }
+
+  .logo-header {
+    height: 100px;
+    /* Sesuaikan tinggi logo */
+    width: auto;
+    /* Agar proporsi logo tetap terjaga */
+    max-width: 100%;
+    /* Pastikan gambar tidak lebih besar dari container */
+    display: block;
+    /* Membuat gambar bertindak sebagai elemen block */
+    margin: 0 auto;
+    /* Untuk memastikan logo berada di tengah, jika diperlukan */
+  }
+
+  .video-quran {
+    top: 50%;
+    height: 100vh;
+  }
+
+  .reference {
+    top: 74%;
+    right: 24%;
+    font-size: 12px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 992px) {
+  /* Contoh untuk mengubah ukuran teks di landscape mode */
+  body {
+    font-size: 1rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+    /* Mengurangi tinggi hero di landscape */
+  }
+
+  .hero h4 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .logo-header {
+    height: 100px;
+    /* Mengurangi ukuran logo */
+  }
+
+  .mynavbar .offcanvas {
+    height: 50vh;
+    width: 70vw;
+    /* Menyesuaikan ukuran navbar pada landscape */
+  }
+
+  .quran {
+    height: 80vh;
+    /* Menurunkan tinggi container video di landscape */
+  }
+
+  .video-quran {
+    width: auto;
+    height: 80vh;
+    /* Memastikan video tidak terlalu besar */
+  }
+
+  .ayat {
+    font-size: 14px;
+    /* Sesuaikan ukuran teks ayat */
+  }
+
+  .home {
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    /* Sesuaikan padding pada home section */
+  }
+
+  .home h2 {
+    font-size: 3rem;
+    /* Mengurangi ukuran font untuk landscape */
+  }
+
+  .home .couple img {
+    width: 80%;
+    /* Mengurangi ukuran gambar */
+  }
+
+  .timeline li .timeline-panel {
+    width: 45%;
+    /* Sesuaikan lebar panel timeline */
+  }
+
+  .rsvp h2 {
+    font-size: 3rem;
+  }
+
+  footer {
+    padding: 2rem;
+  }
+
+  .audio-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+  }
+}

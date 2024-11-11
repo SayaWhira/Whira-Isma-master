@@ -1,0 +1,52 @@
+.simply-countdown {
+  /* overflow: hidden; */
+  display: table;
+  font-family: "Arial", sans-serif;
+  margin: auto;
+}
+.simply-countdown > .simply-section {
+  width: 40px;
+  height: 40px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin: 10px;
+  background: var(--pink);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  position: relative;
+  left: 43rem;
+  top: 18.5rem;
+  /* transition: transform 0.3s ease; Tambahkan efek hover */
+}
+
+.simply-countdown > .simply-section:hover {
+  transform: scale(1); /* Membuat lingkaran sedikit membesar saat dihover */
+}
+
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+}
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 1rem; /* Membuat angka lebih besar */
+  font-weight: bold;
+  color: #fff; /* Memastikan teks tetap terlihat di background berwarna */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+/* animasi */
+
+/* Menggabungkan kedua animasi */
+.simply-countdown > .simply-section {
+  animation: fadeIn 4s ease-in-out forwards,
+    pulseAnimation 2s ease-in-out infinite;
+}
+
+/* Fade-in dan pulse pada angka countdown */
+.simply-countdown > .simply-section .simply-amount {
+  animation: fadeIn 1.5s ease-in-out forwards,
+    pulseAnimation 2s ease-in-out infinite;
+}

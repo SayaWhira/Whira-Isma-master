@@ -1,0 +1,448 @@
+/* .hero h4,
+.hero p,
+.hero h1 {
+  animation: bounce 2s infinite;
+}
+
+.hero h4 {
+  animation-delay: 0s;
+}
+.hero p {
+  animation-delay: 0.2s;
+}
+
+.hero h1 {
+  animation-delay: 0.4s;
+} */
+
+.logo-header {
+  animation: pulseAnimation 2s ease-in-out infinite;
+}
+
+.hero h4 {
+  animation: pan-left 3s ease-out forwards; /* h4 bergerak dari kiri */
+}
+
+.hero p {
+  animation: pan-right 3s ease-out forwards; /* p bergerak dari kanan */
+}
+
+.hero h1 {
+  animation: expand 3s ease-out forwards; /* Durasi 1.5 detik, ease-out untuk efek lembut, forwards untuk berhenti di akhir */
+}
+
+/* Animasikan tombol */
+.btn {
+  animation: fadeInBtn 7s ease-in-out forwards, wiggle 2s linear infinite; /* Animasi muncul selama 2 detik */
+  transition: transform 0.3s ease-in-out; /* Transisi untuk hover */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6699; /* Warna background */
+  color: white; /* Warna teks */
+  font-size: 1.2rem; /* Ukuran font */
+  border-radius: 5px; /* Sedikit membulat */
+  text-decoration: none; /* Hilangkan underline */
+}
+
+/* Efek hover agar tombol membesar sedikit */
+.btn:hover {
+  transform: scale(1.1); /* Membesar saat di-hover */
+}
+
+/* animasi Quran */
+
+.quran-image,
+.logo,
+.ayat {
+  opacity: 0; /* Animasi dimulai dengan elemen tidak terlihat */
+}
+
+.animate .quran-image {
+  animation: fadeIn 5s ease-in forwards;
+  opacity: 1;
+}
+
+.animate .logo {
+  animation: fadeIn 5s ease-in forwards, pulse 3s infinite ease-in-out 3s;
+  opacity: 1;
+}
+
+.animate .ayat {
+  opacity: 1;
+}
+
+/* navbar */
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+* {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background: #be93c5;
+  /* fallback for old browsers */
+  background: linear-gradient(to right, #7bc6cc, #be93c5);
+}
+
+.h1 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: "sacramento", cursive;
+  padding-left: -2rem;
+}
+@-webkit-keyframes example-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(9px);
+    opacity: 0.0625;
+  }
+}
+@keyframes example-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(9px);
+    opacity: 0.0625;
+  }
+}
+@-webkit-keyframes example-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.125;
+  }
+}
+@keyframes example-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.125;
+  }
+}
+@-webkit-keyframes example-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(11px);
+    opacity: 0.1875;
+  }
+}
+@keyframes example-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(11px);
+    opacity: 0.1875;
+  }
+}
+@-webkit-keyframes example-4 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 0.25;
+  }
+}
+@keyframes example-4 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 0.25;
+  }
+}
+@-webkit-keyframes example-5 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(13px);
+    opacity: 0.3125;
+  }
+}
+@keyframes example-5 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(13px);
+    opacity: 0.3125;
+  }
+}
+@-webkit-keyframes example-6 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
+    opacity: 0.375;
+  }
+}
+@keyframes example-6 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
+    opacity: 0.375;
+  }
+}
+@-webkit-keyframes example-7 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 0.4375;
+  }
+}
+@keyframes example-7 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 0.4375;
+  }
+}
+@-webkit-keyframes example-8 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(16px);
+    opacity: 0.5;
+  }
+}
+@keyframes example-8 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(16px);
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes example-9 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(17px);
+    opacity: 0.5625;
+  }
+}
+@keyframes example-9 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(17px);
+    opacity: 0.5625;
+  }
+}
+@-webkit-keyframes example-10 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(18px);
+    opacity: 0.625;
+  }
+}
+@keyframes example-10 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(18px);
+    opacity: 0.625;
+  }
+}
+@-webkit-keyframes example-11 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(19px);
+    opacity: 0.6875;
+  }
+}
+@keyframes example-11 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(19px);
+    opacity: 0.6875;
+  }
+}
+h1 div:nth-child(1) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-1;
+  animation-name: example-1;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(2) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-2;
+  animation-name: example-2;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(3) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-3;
+  animation-name: example-3;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(4) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-4;
+  animation-name: example-4;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(5) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-5;
+  animation-name: example-5;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(6) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-6;
+  animation-name: example-6;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(7) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-7;
+  animation-name: example-7;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(8) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-8;
+  animation-name: example-8;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(9) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-9;
+  animation-name: example-9;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(10) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-10;
+  animation-name: example-10;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+h1 div:nth-child(11) {
+  display: inline-block;
+  text-shadow: 2px 2px 3px #3d6366;
+  -webkit-animation-name: example-11;
+  animation-name: example-11;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
